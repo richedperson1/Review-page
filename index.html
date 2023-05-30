@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Starter</title>
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        height: 100%;
+        background-color: antiquewhite;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .underline {
+        width: 15%;
+        margin-top: 8px;
+        border: 1.5px solid black;
+        margin-bottom: 10%;
+    }
+
+    .image-intro-desination img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border: 2px solid black;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .image-container {
+        width: 150px;
+        height: 150px;
+        position: relative;
+    }
+
+    .name-emp {
+        margin-top: 10px;
+        font-size: 1.23rem;
+        font-weight: 900;
+
+    }
+
+    .review-container {
+        width: 50%;
+        background-color: #fefefe;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        padding-inline: 30px;
+        border-radius: 20px;
+
+    }
+
+    div.intro {
+        text-align: center;
+    }
+
+    .arrow-shape {
+        font-size: 2.3rem;
+        font-weight: 900;
+        cursor: pointer;
+        color: rgb(107, 171, 171);
+        transition: 0.5s ease;
+        transform-origin: left center;
+    }
+
+
+    .next-back-btn {
+        gap: 10px;
+    }
+
+    /* Psudo class */
+
+    .image-container::before {
+
+        content: "";
+        background-color: aqua;
+        position: absolute;
+        width: 115%;
+        height: 115%;
+        border-radius: 50%;
+        left: 3%;
+        top: -9%;
+
+
+    }
+
+    .image-container::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "😍";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.5rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transform: translateY(25%);
+
+    }
+
+    .suprice-me {
+        outline: none;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: rgb(132, 231, 231);
+        padding-inline: 20px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        transform-origin: left center;
+    }
+
+    /* Hover Properties */
+    .arrow-shape:hover {
+        color: rgb(62, 241, 241);
+    }
+
+    .suprice-me:hover {
+        background-color: rgb(62, 241, 241);
+    }
+</style>
+
+<body>
+    <main class="container flex">
+        <h2 class="review">Our Review</h2>
+        <div class="underline"></div>
+        <section class="review-container flex">
+
+            <div class="image-intro-desination flex-center">
+                <div class="image-container">
+
+                    <img src="https://www.course-api.com/images/people/person-1.jpeg" alt="">
+                </div>
+                <p class="name-emp">Rutvik Jaiswal</p>
+                <p class="desination">Full stack developer</p>
+            </div>
+
+            <div class="intro flex">
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus nemo
+                    corporis
+                    sequi. Ipsum quidem, repellendus earum maxime, tempora vero et commodi veritatis aperiam voluptates,
+                    temporibus error laborum? Velit, dolor aspernatur atque itaque eos debitis quod exercitationem
+                    voluptate quidem, iste at reiciendis eveniet beatae, laboriosam odit earum repellat eius veritatis!
+                </p>
+            </div>
+
+            <div class="next-back-btn flex">
+                <div class="prev-arrow arrow-shape">⬅</div>
+                <div class="next-arrow arrow-shape">➡</div>
+            </div>
+            <button class="suprice-me">Suprice me</button>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+
+</html>
